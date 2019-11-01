@@ -1,0 +1,40 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cordova-browser": "6.0.0",
+    "cordova-ios": "^5.0.1",
+    "cordova-plugin-browser": "1.0.1",
+    "cordova-plugin-splashscreen": "5.0.3",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "mithril": "^2.0.0-rc.4",
+    "phonegap-plugin-barcodescanner": "^8.1.0",
+    "sass": "^1.23.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -d",
+    "style": "sass base.scss www/css/style.min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "cordova": {
+    "plugins": {
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-browser": {},
+      "cordova-plugin-splashscreen": {}
+    },
+    "platforms": [
+      "browser",
+      "ios"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+.slide-right {
+    height:100%;
+    animation: moveFromRight 0.4s ease both;
+}
+.slide-left {
+    animation: moveToRight 0.4s ease both;
+}
+.slide-up {
+    min-height: calc(100% - 2rem);
+    padding: 1rem;
+    animation: moveUp 0.4s ease both;
+}
+.slide-down {
+    animation: moveDown 0.4s ease both;
+}
+
+@keyframes moveFromRight {
+    from { transform: translateX(30%); }
+}
+
+@keyframes moveToRight {
+    from { transform: translateX(30%); }
+    to { transform: translateX(100%); }
+}
+
+@keyframes moveUp {
+    from { transform: translateY(30%); }
+}
+
+@keyframes moveDown {
+    to { transform: translateY(100%); }
+}

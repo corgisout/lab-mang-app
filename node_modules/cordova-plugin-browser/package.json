@@ -1,0 +1,65 @@
+{
+  "_from": "cordova-plugin-browser",
+  "_id": "cordova-plugin-browser@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-Qgwgem3vP+zpVb9nGMHX2gFGF5CTG1fa9qp5/nDknMEyO+XCdYCQci0MrFwmzdhT6dumdJn9rvobqrIDvo4HLQ==",
+  "_location": "/cordova-plugin-browser",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-browser",
+    "name": "cordova-plugin-browser",
+    "escapedName": "cordova-plugin-browser",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-browser/-/cordova-plugin-browser-1.0.1.tgz",
+  "_shasum": "9f4aba5943aa101a46dc1b0cd108cde720f409d8",
+  "_spec": "cordova-plugin-browser",
+  "_where": "/Users/user161708/Downloads/test",
+  "author": {
+    "name": "Maksim Chemerisuk",
+    "email": "chemerisuk@gmail.com",
+    "url": "https://github.com/chemerisuk"
+  },
+  "bugs": {
+    "url": "https://github.com/chemerisuk/cordova-plugin-browser/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-browser",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Open browser in your app",
+  "homepage": "https://github.com/chemerisuk/cordova-plugin-browser#readme",
+  "keywords": [
+    "cordova",
+    "browser",
+    "SFSafariViewController",
+    "Chrome Custom Tabs",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-browser",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chemerisuk/cordova-plugin-browser.git"
+  },
+  "scripts": {
+    "postversion": "git push && git push --tags",
+    "version": "replace -s 'version=\"(.+)(?=\">)' 'version=\"'$npm_package_version plugin.xml && git add plugin.xml"
+  },
+  "version": "1.0.1"
+}
