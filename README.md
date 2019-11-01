@@ -28,5 +28,5 @@ now to actuly get the app on your phone you have a few steps to follow
 4. now write cordova build ios
 5. after that navigate to project/platforms/ios and open SERLLab.xcodeproj with xcode
 6. now connect your device with your mac and you should be able to find under the devices which you can find at the top of your screen to left. it should say something like iPhone 11
-7. now you will press xcode and go the preferences then press account where you will add your apple account.
+7. now you will press xcode and go to preferences then press account where you will add your apple developer account.
 8. after that you should just be able to press the play button and the app will download to your phone.
