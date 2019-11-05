@@ -4,13 +4,16 @@ import { login } from "../models/login.js";
 
 
 const loginForm = {
+    //sets user info to default and token to default if something were to go wrong
     oninit: function(){
         login.initUser(),
         login.token == ""
     },
+    //creates a view with login inputs that are sanetized
     view: function () {
         return [
             m("form", {
+                //on submit the app will run the login function to try a login. if the login fails it will return an error message
                 onsubmit: function(event) {
                     event.preventDefault();
                     login.login();

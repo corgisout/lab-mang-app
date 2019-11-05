@@ -8,9 +8,11 @@ let login = {
     onebooking: [],
     allBookings: [],
     currentUser: { userId: "", password: "" },
+    //function to init new user.
     initUser: function() {
         login.currentUser = { userId: "", password: "" };
     },
+    //login function sets the route to borrowbooking
     login: function() {
         return m.request({
             method: "POST",
@@ -22,12 +24,13 @@ let login = {
         }).then(function(result){
             if (typeof(result.data) !== "undefined"){
                 login.token = result.data.token;
-                m.route.set("/barcode");
+                m.route.set("/borrowbooking");
             } else {
                 alert(result.errors.details);
             }
         });
     },
+    //function to get bookings of logged in user returns object with booking info
     GetBookings: function(){
         return m.request({
             method: "GET",
@@ -40,7 +43,7 @@ let login = {
             login.allBookings = result
         })
     },
-
+    //function to check out equipment moves checked out equipment to return
     checkout: function(){
         return m.request({
             method: "PUT",
@@ -55,6 +58,7 @@ let login = {
             console.log("works")
         })
     },
+    //function to return already borrowed equipment
     return: function(){
         return m.request({
             method: "PUT",
@@ -69,6 +73,7 @@ let login = {
             console.log("works")
         })
     },
+    //reset user so new user can log in and sets path to home
     logout: function(){
         login.token = ""
         m.route.set("/home");

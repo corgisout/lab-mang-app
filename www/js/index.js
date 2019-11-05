@@ -26,7 +26,7 @@ import m from "mithril";
 import { home } from "./views/home.js";
 import { navbar } from "./views/navbar.js";
 import { loginForm } from "./views/loginForm.js";
-import { barcode } from "./views/barcode.js";
+import { borrowbooking } from "./views/borrowbooking.js";
 import { singlebooking } from "./views/singlebooking.js";
 import { returnbooking } from "./views/returnbooking.js";
 
@@ -47,9 +47,9 @@ var app = {
                     return m(navbar, m(loginForm));
                 }
             },
-            "/barcode": {
+            "/borrowbooking": {
                 render : function () {
-                    return m(navbar ,m(barcode));
+                    return m(navbar ,m(borrowbooking));
                 }
             },
             "/returnbooking": {

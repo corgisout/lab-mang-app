@@ -4,10 +4,12 @@ import { login } from "../models/login.js";
 
 
 const singlebooking = {
+    //gets all bookings
     oninit: function(vnode){
         login.onebooking = login.allBookings.filter(word => word.id == vnode.attrs.id)
         login.GetBookings();
     },
+    //animation for page
     onbeforeremove: function(vnode) {
     vnode.dom.classList.add("slide-down");
     return new Promise(function(resolve) {
@@ -17,11 +19,13 @@ const singlebooking = {
         }, 250);
     });
     },
+    //show only selected booking from earlier borrow or return page
     view: function (vnode) {
         console.log(vnode.attrs.id)
         return [
             m("div.slide-up", [
             m("p", login.onebooking[0].equipment_name),
+            //creates button the start scan
             m("button.button", {
                 onclick: () => {startScan()}
             }, "Scan")
@@ -29,7 +33,7 @@ const singlebooking = {
         ];
     }
 };
-
+//scanning to check if the barcode is right if nor return error message
 function startScan() {
     cordova.plugins.barcodeScanner.scan(
         function (result) {
