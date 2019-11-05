@@ -23,9 +23,9 @@ const borrowbooking = {
         return [
             m("div.slide-up", [
             m("div.test", login.allBookings.map(function(data){
-                return m("p", [
+                return data.status == 2 ?m("p", [
                     data.status == 2 ?m("p",  m("a[href='/singlebooking/" + data.id + "']", {oncreate: m.route.link}, data.equipment_name)): null,
-            ]);
+            ]): null;
             })),
         ])
         ];
